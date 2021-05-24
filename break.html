@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<link rel="icon" href="https://icons-for-free.com/iconfiles/png/512/text+icon-1320166904007805068.png">
+    <html lang="en">
+    <head>
+        <title>Text Tools</title>
+    </head>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="style.css"></script>
+    <script src="app.js"></script>
+    <body>
+        <div class="topnav">
+            <a href="index.html"><hi><i class="fa fa-home"></i></hi> Home</a>
+            <a href="prefix.html">Prefix</a>
+            <a href="suffix.html">Suffix</a>
+            <a href="prefixsuffix.html">Prefix and Suffix</a>
+            <a class="active" href="break.html">Break Text</a>
+            <a href="#">Something Else</a>
+        </div>
+        <br>
+        <form id="breakform">
+            <label for="text">Text:</label>
+            <textarea id="text" name="text" class="textarea" >blah</textarea>
+            <label for="break">Break:</label>
+            <input type="string" id="thebreak" name="break" class="break"><br><br>
+            <input type="submit" value="Submit" class="thebtnclass">
+            <button class="thecopybtnclass" onclick="copyNewText(document.getElementById('formattext'))">Copy</button>
+        </form>
+        <form id="formatbox">
+            <textarea id="formattext" name="formattext" class="formattextbox" readonly>New text</textarea>
+        </form>
+        <script>
+            var newtextbox = document.getElementById("formattext");
+            var breakform = document.getElementById("breakform");
+            var thebreak = document.getElementById("thebreak")
+            var thetext = document.getElementById("text")
+
+            breakform.onsubmit = function (e){
+                e.preventDefault
+                submitBreak(thebreak.value, thetext.value, newtextbox)
+                return false;
+            }
+        </script>
+    </body>
+</html>
